@@ -13,6 +13,33 @@
         android:theme="@style/Theme.DemoApp"
         tools:targetApi="31">
         <activity
+            android:name=".TeachersDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".AddStudent"
+            android:exported="false" />
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Diary"
+            android:exported="false" />
+        <activity
+            android:name=".Fees"
+            android:exported="false" />
+        <activity
+            android:name=".Homework"
+            android:exported="false" />
+        <activity
+            android:name=".Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
             android:name=".LoginPage"
             android:exported="false" />
         <activity

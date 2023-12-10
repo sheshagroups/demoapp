@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/drawer_boder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="16dp"
+        android:background="@drawable/header_bg"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/com_logo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shesha Groups"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome You All"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home"
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_home_24"
+            android:drawablePadding="8dp"
+            android:text="Home"
+            android:textColor="@color/purple"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentdetail"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Student Detail"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/classwork"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Class Work"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_menu_book_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/homework"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Home Work"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_menu_book_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fee"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Fees"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_account_balance_24"
+            android:drawablePadding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/diary"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Diary"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_assignment_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/notification"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Notification"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_announcement_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/purple"/>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Logout"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_call_received_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
