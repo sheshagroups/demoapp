@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".TeachersDashboard">
 
+    <Button
+        android:id="@+id/addstudent"
+        android:layout_width="141dp"
+        android:layout_height="87dp"
+        android:text="Add"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
