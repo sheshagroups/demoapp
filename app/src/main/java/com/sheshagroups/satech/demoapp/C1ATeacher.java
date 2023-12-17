@@ -57,7 +57,7 @@ public class C1ATeacher extends AppCompatActivity {
                 startActivity(cwpdf);
             }
         });
-        uploadcw.setOnClickListener(new View.OnClickListener() {
+        addnotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1ATeacher.this,C1A_AddNotification.class);
