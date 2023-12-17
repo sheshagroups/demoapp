@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class TeachersDashboard extends AppCompatActivity {
 
-    Button button;
+    Button button,button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class TeachersDashboard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 }

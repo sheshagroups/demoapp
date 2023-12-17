@@ -7,12 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginPage extends AppCompatActivity {
 
     EditText userid,password;
     Button loginButton;
+    TextView teacherlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +25,27 @@ public class LoginPage extends AppCompatActivity {
 
         userid = findViewById(R.id.userid);
         password = findViewById(R.id.password);
+        teacherlogin = findViewById(R.id.teacherlogin);
         loginButton = findViewById(R.id.loginButton);
+
+        teacherlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent teacherlogin = new Intent(LoginPage.this,TeacherLogin.class);
+                startActivity(teacherlogin);
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(userid.getText().toString().equals("teacher245") && password.getText().toString().equals("teacher245")){
-                    Toast.makeText(LoginPage.this,"Invalid Credintials", Toast.LENGTH_SHORT).show();
-                    Intent teacher = new Intent(LoginPage.this,TeachersDashboard.class);
-                    startActivity(teacher);
+                if((userid.getText().toString().equals("1") && password.getText().toString().equals("A") )|| (userid.getText().toString().equals("1") && password.getText().toString().equals("a"))){
+                    Toast.makeText(LoginPage.this,"Login Successfull", Toast.LENGTH_SHORT).show();
+                    Intent class1A = new Intent(LoginPage.this,C1A_JPS_Login.class);
+                    startActivity(class1A);
                     finish();
-                } else{
+                } else
+                {
                     Toast.makeText(LoginPage.this,"Invalid Credintials", Toast.LENGTH_SHORT).show();
                 }
             }

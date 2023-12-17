@@ -7,9 +7,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".LoginPage"
+    tools:context=".C1A_JPS_Login"
     android:background="@drawable/login_bg">
-    
+
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -23,7 +23,7 @@
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
-    
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp"
         android:background="@drawable/custom_edittext">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Class 1st A Login"
                 android:id="@+id/loginText"
                 android:textSize="36sp"
                 android:textAlignment="center"
@@ -53,12 +53,12 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/userid"
+                android:id="@+id/studentid1a"
                 android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
-                android:hint="Class"
+                android:hint="Student ID"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
                 android:layout_marginTop="40dp"/>
@@ -66,26 +66,21 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/password"
+                android:id="@+id/studentpassword1a"
                 android:background="@drawable/custom_edittext"
-                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:hint="Section"
+                android:hint="Password"
                 android:padding="8dp"
+                android:inputType="textPassword"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
                 android:layout_marginTop="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Login as Teacher"
-                android:id="@+id/teacherlogin"
-                android:layout_marginLeft="100dp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/loginButton"
+                android:id="@+id/loginC1A"
                 android:text="Login"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
@@ -98,5 +93,5 @@
 
     </androidx.cardview.widget.CardView>
 
-    
+
 </LinearLayout>

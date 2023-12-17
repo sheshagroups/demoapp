@@ -108,6 +108,24 @@
             android:drawablePadding="8dp"/>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dPP"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="DPP"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_menu_book_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="157.5dp"
@@ -160,6 +178,61 @@
             android:text="Notification"
             android:textSize="20sp"
             android:drawableLeft="@drawable/baseline_announcement_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutschool"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="About School"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_bungalow_24"
+            android:drawablePadding="8dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/schoolalbum"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_bungalow_24"
+            android:drawablePadding="8dp"
+            android:text="School Album"
+            android:textColor="@color/purple"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="157.5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactus"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="157.5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple"
+            android:text="Contact Us"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_call_24"
             android:drawablePadding="8dp"/>
 
     </LinearLayout>

@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddStudent">
+    tools:context=".AddStudentC1A">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="20dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="30dp"
         android:background="@drawable/custom_edittext">
@@ -33,8 +33,9 @@
                 android:textStyle="bold"
                 android:textColor="@color/purple"/>
 
+
             <EditText
-                android:id="@+id/Name"
+                android:id="@+id/C1AName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
@@ -45,9 +46,31 @@
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
             <EditText
+                android:id="@+id/C1AStudentId"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/Sclass"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext"
+                android:hint="Student Id"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+            <EditText
+                android:id="@+id/C1AStudentPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext"
+                android:hint="Password"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/C1Aclass"
                 android:background="@drawable/custom_edittext"
                 android:hint="Class"
                 android:inputType="number"
@@ -61,7 +84,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/section"
+                android:id="@+id/C1Asection"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Section"
@@ -71,7 +94,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/RollNo"
+                android:id="@+id/C1ARollNo"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Roll No."
@@ -82,7 +105,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/FatherName"
+                android:id="@+id/C1AFatherName"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Father's Name"
@@ -93,7 +116,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/MotherName"
+                android:id="@+id/C1AMotherName"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Mother's Name"
@@ -104,7 +127,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/MobileNo"
+                android:id="@+id/C1AMobileNo"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Mobile No."
@@ -116,7 +139,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/FeeSubmitted"
+                android:id="@+id/C1AFeeSubmitted"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Fees Submitted"
@@ -126,7 +149,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/Address"
+                android:id="@+id/C1AAddress"
                 android:background="@drawable/custom_edittext"
                 android:padding="8dp"
                 android:hint="Address"
@@ -137,7 +160,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/addButton"
+                android:id="@+id/C1AaddButton"
                 android:text="Add Student"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"

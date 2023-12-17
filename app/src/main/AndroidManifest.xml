@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +20,81 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoApp"
         tools:targetApi="31">
+        <activity
+            android:name=".C1A_AddNotification"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_UploadDiary"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_UploadDpp"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_UploadHW"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_UploadCW"
+            android:exported="false" />
+        <activity
+            android:name=".School_Album"
+            android:exported="false" />
+        <activity
+            android:name=".ContactUs"
+            android:exported="false" />
+        <activity
+            android:name=".AboutSchool"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".AddStudentC1A"
+            android:exported="false" />
+        <activity
+            android:name=".C1ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherLogin"
+            android:exported="false" />
+        <activity
+            android:name=".C1A_JPS_Login"
+            android:exported="false" />
+        <activity
+            android:name=".SelectClass"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".EditStudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".StudentDetail1A"
+            android:exported="false" />
+        <activity
+            android:name=".StudentClass1A"
+            android:exported="false" />
         <activity
             android:name=".TeachersDashboard"
             android:exported="false" />
@@ -32,9 +115,6 @@
             android:exported="false" />
         <activity
             android:name=".Classwork"
-            android:exported="false" />
-        <activity
-            android:name=".StudentDetail"
             android:exported="false" />
         <activity
             android:name=".Home"

@@ -1,36 +1,17 @@
 package com.sheshagroups.satech.demoapp;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.internal.Storage;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
-import org.checkerframework.checker.units.qual.C;
 
 public class AddStudent extends AppCompatActivity {
     FirebaseAuth auth;
@@ -39,6 +20,8 @@ public class AddStudent extends AppCompatActivity {
     ImageView upload;
     String imageURL;
     Uri uri;
+    FirebaseDatabase database;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +37,8 @@ public class AddStudent extends AppCompatActivity {
         fee = findViewById(R.id.FeeSubmitted);
         address = findViewById(R.id.Address);
         add = findViewById(R.id.addButton);
-        upload = findViewById(R.id.uploadimage);
+
+        /*
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -88,12 +72,46 @@ public class AddStudent extends AppCompatActivity {
             }
         });
 
+        */
+
+
+// Main Code Down
+
+        /*
+         add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                database = FirebaseDatabase.getInstance();
+                reference = database.getReference("users");
+                String Sname = name.getText().toString();
+                String SSclass = Sclass.getText().toString();
+                String Ssection = section.getText().toString();
+                String Srollno = rollno.getText().toString();
+                String Sfname = fname.getText().toString();
+                String Smname = mname.getText().toString();
+                String Smobile = mobile.getText().toString();
+                String Sfee = fee.getText().toString();
+                String Saddress = address.getText().toString();
+                String Sstudentid =
+
+                HelperClass1 helperClass1 = new HelperClass1(Sname,SSclass,Ssection,Srollno,Sfname,Smname,Smobile,Sfee,Saddress,);
+                reference.child(Sname).setValue(helperClass1);
+
+                Toast.makeText(AddStudent.this,"Student Added",Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
     }
+    */
 
+        // Main Code Up
+
+    /*
     public void saveData(){
 
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Student Image")
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Students")
                 .child(uri.getLastPathSegment());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(AddStudent.this);
@@ -109,7 +127,7 @@ public class AddStudent extends AppCompatActivity {
                 while (!uriTask.isComplete());
                 Uri urlImage = uriTask.getResult();
                 imageURL = urlImage.toString();
-                uploadData();
+                // pending
                 dialog.dismiss();
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -120,8 +138,7 @@ public class AddStudent extends AppCompatActivity {
         });
     }
 
-    public void uploadData() {
-
+    public void uploadData(){
         String Sname = name.getText().toString();
         String SSclass = Sclass.getText().toString();
         String Ssection = section.getText().toString();
@@ -132,24 +149,13 @@ public class AddStudent extends AppCompatActivity {
         String Sfee = fee.getText().toString();
         String Saddress = address.getText().toString();
 
-        DataClass1 dataClass1 = new DataClass1(Sname,SSclass,Ssection,Srollno,Sfname,Smname,Smobile,Sfee,Saddress,imageURL);
+        DataClass1 dataClass1 = new DataClass1(Sname,SSclass,Ssection,Srollno,Sfname,Smname,Smobile,Sfee,Saddress);
 
-        FirebaseDatabase.getInstance().getReference("Class 1st A").child(Sname)
-                .setValue(dataClass1).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(AddStudent.this,"Student Added",Toast.LENGTH_SHORT).show();
-                            finish();
-                        }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(AddStudent.this, e.getMessage().toString(),Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
+        FirebaseDatabase.getInstance().getReference("users").child(Sname)
+                .setValue(dataClass1);
+        Toast.makeText(AddStudent.this,"Added Successfully",Toast.LENGTH_SHORT).show();
     }
-}
+
+     */
+
+}}
