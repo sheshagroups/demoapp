@@ -1,8 +1,11 @@
 package com.sheshagroups.satech.demoapp;
 
 public class CWFileModel {
-    public String uploadET;
-    public String uploadURL;
+    public String uploadET, uploadURL;
+
+    public CWFileModel(){
+
+    }
 
     public CWFileModel(String uploadET, String uploadURL) {
         this.uploadET = uploadET;

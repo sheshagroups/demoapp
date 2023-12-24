@@ -1,5 +1,7 @@
 package com.sheshagroups.satech.demoapp;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -7,16 +9,31 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class C1A_Home extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageView menu;
+
     LinearLayout home,classwork,homework,dpp,fees,diary,notification,studentdetail,aboutschool,schoolalbum,contactus,logout;
-    CardView addstudent,uploadcw,uploadhw,uploaddpp,uploaddiary,addnotification,fees1,logout1;
+    CardView student_detail,student_cw,student_hw,student_dpp,student_diary,student_notification,student_fees,student_logout;
 
 
     @Override
@@ -37,14 +54,17 @@ public class C1A_Home extends AppCompatActivity {
         schoolalbum = findViewById(R.id.schoolalbum);
         contactus = findViewById(R.id.contactus);
         logout = findViewById(R.id.logout);
-        addstudent=findViewById(R.id.addstudent);
-        uploadcw=findViewById(R.id.upload_cw);
-        uploadhw=findViewById(R.id.upload_hw);
-        uploaddpp=findViewById(R.id.upload_dpp);
-        uploaddiary=findViewById(R.id.add_diary);
-        addnotification=findViewById(R.id.add_notification);
-        fees1=findViewById(R.id.fees);
-        logout1=findViewById(R.id.logout_teacher);
+        student_detail=findViewById(R.id.addstudent);
+        student_cw=findViewById(R.id.upload_cw);
+        student_hw=findViewById(R.id.upload_hw);
+        student_dpp=findViewById(R.id.upload_dpp);
+        student_diary=findViewById(R.id.add_diary);
+        student_notification=findViewById(R.id.add_notification);
+        student_fees=findViewById(R.id.fees);
+        student_logout=findViewById(R.id.logout_teacher);
+
+
+
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,26 +82,29 @@ public class C1A_Home extends AppCompatActivity {
         studentdetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(C1A_Home.this,C1A_StudentDetail.class);
+                Intent studentdetail = new Intent(C1A_Home.this,C1A_StudentDetail.class);
+                startActivity(studentdetail);
+
             }
 
         });
         classwork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(C1A_Home.this,C1A_Classwork.class);
+                startActivity(new Intent (C1A_Home.this,C1A_Classwork.class));
             }
         });
         homework.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(C1A_Home.this,C1A_Homework.class);
+                startActivity(new Intent (C1A_Home.this,C1A_Homework.class));
             }
         });
         dpp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                redirectActivity(C1A_Home.this,C1A_DPP.class);}
+                public void onClick(View v) {
+                    startActivity(new Intent (C1A_Home.this,C1A_DPP.class));
+                }
             });
         fees.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,42 +153,42 @@ public class C1A_Home extends AppCompatActivity {
             }
         });
 
-        addstudent.setOnClickListener(new View.OnClickListener() {
+        student_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(C1A_Home.this,C1A_StudentDetail.class);
-                startActivity(intent);
+                Intent studentdetail = new Intent(C1A_Home.this,C1A_StudentDetail.class);
+                startActivity(studentdetail);
             }
         });
-        uploadcw.setOnClickListener(new View.OnClickListener() {
+        student_cw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this,C1A_Classwork.class);
                 startActivity(cwpdf);
             }
         });
-        uploadhw.setOnClickListener(new View.OnClickListener() {
+        student_hw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this,C1A_Homework.class);
                 startActivity(cwpdf);
             }
         });
-        uploaddpp.setOnClickListener(new View.OnClickListener() {
+        student_dpp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this,C1A_DPP.class);
                 startActivity(cwpdf);
             }
         });
-        uploaddiary.setOnClickListener(new View.OnClickListener() {
+        student_diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this,C1A_Diary.class);
                 startActivity(cwpdf);
             }
         });
-        addnotification.setOnClickListener(new View.OnClickListener() {
+        student_notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this,C1A_Notification.class);
@@ -173,7 +196,7 @@ public class C1A_Home extends AppCompatActivity {
             }
         });
 
-        logout.setOnClickListener(new View.OnClickListener() {
+        student_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this,LoginPage.class);
@@ -208,4 +231,5 @@ public class C1A_Home extends AppCompatActivity {
         super.onPause();
         closeDrawer(drawerLayout);
     }
-    }
+
+}

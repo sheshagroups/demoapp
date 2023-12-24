@@ -27,34 +27,30 @@ public class C1A_StudentDetail extends AppCompatActivity {
         address=findViewById(R.id.studentaddress);
         fee=findViewById(R.id.studentfee);
 
-       // showStudentData();
+       showStudentData();
 
     }
-/*
     public void showStudentData(){
         Intent intent = getIntent();
-        String Studentname = intent.getStringExtra("sname");
-        String Studentclass = intent.getStringExtra("sclass");
-        String Studentsection = intent.getStringExtra("ssection");
-        String Studentid = intent.getStringExtra("sstudentid");
-        String Studentfname = intent.getStringExtra("sfname");
-        String Studentmname = intent.getStringExtra("smname");
-        String Studentmobile = intent.getStringExtra("smobile");
-        String Studentaddress = intent.getStringExtra("saddress");
-        String Studentfee = intent.getStringExtra("sfee");
-        String Studentrollno = intent.getStringExtra("srollno");
-
-        name.setText(Studentname);
-        Class.setText(Studentclass);
-        section.setText(Studentsection);
-        rollno.setText(Studentrollno);
-        studentid.setText(Studentid);
-        fname.setText(Studentfname);
-        mname.setText(Studentmname);
-        mobile.setText(Studentmobile);
-        fee.setText(Studentfee);
-        address.setText(Studentaddress);
+        String sname = intent.getStringExtra("name");
+        String sclass = intent.getStringExtra("Class");
+        String ssection = intent.getStringExtra("section");
+        String sstudentid = intent.getStringExtra("studentid");
+        String sfname = intent.getStringExtra("fname");
+        String smname = intent.getStringExtra("mname");
+        String smobile = intent.getStringExtra("mobile");
+        String saddress = intent.getStringExtra("address");
+        String sfee = intent.getStringExtra("fee");
+        String srollno = intent.getStringExtra("rollno");
+        name.setText(sname);
+        Class.setText(sclass);
+        section.setText(ssection);
+        rollno.setText(srollno);
+        studentid.setText(sstudentid);
+        fname.setText(sfname);
+        mname.setText(smname);
+        mobile.setText(smobile);
+        fee.setText(sfee);
+        address.setText(saddress);
     }
-
- */
 }

@@ -4,11 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoApp"
         tools:targetApi="31">
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
         <activity
             android:name=".C1A_AddNotification"
             android:exported="false" />
@@ -81,43 +82,13 @@
             android:name=".C1A_JPS_Login"
             android:exported="false" />
         <activity
-            android:name=".SelectClass"
-            android:exported="false" />
-        <activity
             android:name=".StudentDetail"
-            android:exported="false" />
-        <activity
-            android:name=".EditStudentDetail"
-            android:exported="false" />
-        <activity
-            android:name=".StudentDetail1A"
-            android:exported="false" />
-        <activity
-            android:name=".StudentClass1A"
             android:exported="false" />
         <activity
             android:name=".TeachersDashboard"
             android:exported="false" />
         <activity
             android:name=".AddStudent"
-            android:exported="false" />
-        <activity
-            android:name=".Notification"
-            android:exported="false" />
-        <activity
-            android:name=".Diary"
-            android:exported="false" />
-        <activity
-            android:name=".Fees"
-            android:exported="false" />
-        <activity
-            android:name=".Homework"
-            android:exported="false" />
-        <activity
-            android:name=".Classwork"
-            android:exported="false" />
-        <activity
-            android:name=".Home"
             android:exported="false" />
         <activity
             android:name=".LoginPage"
