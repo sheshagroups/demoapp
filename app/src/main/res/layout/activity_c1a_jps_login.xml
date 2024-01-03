@@ -76,6 +76,16 @@
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
                 android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/class_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Class and Section"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/purple"
+                android:textStyle="bold"/>
 
             <Button
                 android:layout_width="match_parent"

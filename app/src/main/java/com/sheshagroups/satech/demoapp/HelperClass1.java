@@ -2,7 +2,7 @@ package com.sheshagroups.satech.demoapp;
 
 public class HelperClass1 {
 
-    String Sname, Sclass, Ssection, Srollno, Sfname, Smname, Smobile, Sfee, Saddress,Sstudentid,Sstudentpass ;
+    String Sname, Sclass, Ssection, Srollno, Sfname, Smname, Smobile, Sfee, Saddress,Sstudentid,Sstudentpass,SstudentTeacherPassword,SAttendance;
 
     public String getSname() {
         return Sname;
@@ -90,7 +90,23 @@ public class HelperClass1 {
     }
 
 
-    public HelperClass1(String sname, String sclass, String ssection, String srollno, String sfname, String smname, String smobile, String sfee, String saddress,String sstudentid,String sstudentpass) {
+    public String getSstudentTeacherPassword() {
+        return SstudentTeacherPassword;
+    }
+
+    public void setSstudentTeacherPassword(String sstudentTeacherPassword) {
+        SstudentTeacherPassword = sstudentTeacherPassword;
+    }
+
+    public String getSAttendance() {
+        return SAttendance;
+    }
+
+    public void setSAttendance(String SAttendance) {
+        this.SAttendance = SAttendance;
+    }
+
+    public HelperClass1(String sname, String sclass, String ssection, String srollno, String sfname, String smname, String smobile, String sfee, String saddress, String sstudentid, String sstudentpass, String sstudentTeacherPassword, String sattendance) {
         Sname = sname;
         Sclass = sclass;
         Ssection = ssection;
@@ -102,5 +118,7 @@ public class HelperClass1 {
         Saddress = saddress;
         Sstudentid = sstudentid;
         Sstudentpass = sstudentpass;
+        SstudentTeacherPassword = sstudentTeacherPassword;
+        SAttendance = sattendance;
     }
 }

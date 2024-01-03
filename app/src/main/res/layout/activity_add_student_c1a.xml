@@ -6,15 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AddStudentC1A">
-
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="30dp"
-        android:background="@drawable/custom_edittext">
-
+        android:layout_height="match_parent"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,15 +29,20 @@
                 android:textColor="@color/purple"/>
 
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/purple"
+                />
             <EditText
                 android:id="@+id/C1AName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="5dp"
                 android:background="@drawable/custom_edittext"
                 android:hint="Name"
                 android:inputType="text"
                 android:padding="8dp"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
             <EditText
@@ -68,6 +68,17 @@
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
             <EditText
+                android:id="@+id/StudentTeacherPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_edittext"
+                android:hint="StudentTeacherPassword"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background" />
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/C1Aclass"
@@ -77,9 +88,7 @@
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
-
-
+                android:layout_marginTop="5dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -90,7 +99,7 @@
                 android:hint="Section"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -100,7 +109,7 @@
                 android:hint="Roll No."
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -111,7 +120,7 @@
                 android:hint="Father's Name"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -122,7 +131,7 @@
                 android:hint="Mother's Name"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -134,7 +143,7 @@
                 android:inputType="phone"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -145,7 +154,17 @@
                 android:hint="Fees Submitted"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/attendance"
+                android:background="@drawable/custom_edittext"
+                android:padding="8dp"
+                android:hint="Attendance"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="5dp"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -155,7 +174,7 @@
                 android:hint="Address"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="5dp"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -163,13 +182,9 @@
                 android:id="@+id/C1AaddButton"
                 android:text="Add Student"
                 android:textSize="18sp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:backgroundTint="@color/purple"
                 app:cornerRadius="20dp"/>
-
         </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
+    </ScrollView>
 </LinearLayout>
