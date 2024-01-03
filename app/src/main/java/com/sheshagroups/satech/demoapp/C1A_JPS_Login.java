@@ -43,7 +43,13 @@ public class C1A_JPS_Login extends AppCompatActivity {
         Login = findViewById(R.id.loginC1A);
         class_section = findViewById(R.id.class_section);
         sharedPreferences=getSharedPreferences("login",MODE_PRIVATE);
+        sharedPreferences1=getSharedPreferences("student",MODE_PRIVATE);
         FirebaseApp.initializeApp(this);
+        Intent home = new Intent(C1A_JPS_Login.this,C1A_Home.class);
+        if(sharedPreferences1.contains("Student Id")&&sharedPreferences1.contains("Student Pass")){
+            startActivity(home);
+            finish();
+        }
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +57,63 @@ public class C1A_JPS_Login extends AppCompatActivity {
                 if (!validateStudentPass() | !validateStudentId()){
 
                 }else{
-                    checkStudent();
+                    final String studentid = StudentId.getText().toString().trim();
+                    final String studentpass = StudentPassword.getText().toString().trim();
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Class 1A");
+                    Query checkUserDatabase = reference.orderByChild("sstudentid").equalTo(studentid);
+                    checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if(snapshot.exists()){
+                                Log.d("C1A_JPS_Login", "Data Snapshot: " + snapshot.toString());
+                                StudentId.setError(null);
+                                String passwordFromDB = snapshot.child(studentid).child("sstudentpass").getValue(String.class);
+                                if(passwordFromDB.equals(studentpass)){
+                                    StudentPassword.setError(null);
+                                    String nameFromDatabase = snapshot.child(studentid).child("sname").getValue(String.class);
+                                    String classFromDatabase = snapshot.child(studentid).child("sclass").getValue(String.class);
+                                    String sectionFromDatabase = snapshot.child(studentid).child("ssection").getValue(String.class);
+                                    String studentidFromDatabase = snapshot.child(studentid).child("sstudentid").getValue(String.class);
+                                    String rollnoFromDatabase = snapshot.child(studentid).child("srollno").getValue(String.class);
+                                    String fnameFromDatabase = snapshot.child(studentid).child("sfname").getValue(String.class);
+                                    String mnameFromDatabase = snapshot.child(studentid).child("smname").getValue(String.class);
+                                    String mobileFromDatabase = snapshot.child(studentid).child("smobile").getValue(String.class);
+                                    String addressFromDatabase = snapshot.child(studentid).child("saddress").getValue(String.class);
+                                    String feeFromDatabase = snapshot.child(studentid).child("sfee").getValue(String.class);
+                                    String attendanceFromDatabase = snapshot.child(studentid).child("sattendance").getValue(String.class);
+                                    home.putExtra("name",nameFromDatabase);
+                                    Log.d("C1A_JPS_Login", "Name: " + nameFromDatabase);
+                                    home.putExtra("class",classFromDatabase);
+                                    home.putExtra("section",sectionFromDatabase);
+                                    home.putExtra("studentid",studentidFromDatabase);
+                                    home.putExtra("rollno",rollnoFromDatabase);
+                                    home.putExtra("fname",fnameFromDatabase);
+                                    home.putExtra("mname",mnameFromDatabase);
+                                    home.putExtra("mobile",mobileFromDatabase);
+                                    home.putExtra("address",addressFromDatabase);
+                                    home.putExtra("fee",feeFromDatabase);
+                                    home.putExtra("attendance",attendanceFromDatabase);
+                                    SharedPreferences.Editor editor= sharedPreferences1.edit();
+                                    editor.putString("Student Id", String.valueOf(StudentId));
+                                    editor.putString("Student Pass", String.valueOf(StudentPassword));
+                                    editor.commit();
+                                    startActivity(home);
+                                    finish();
+
+                                }else{
+                                    StudentPassword.setError("Invalid Credentials");
+                                    StudentPassword.requestFocus();
+                                }
+                            } else{
+                                StudentId.setError("User does not exist");
+                                StudentId.requestFocus();
+                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            Log.e("C1A_JPS_Login", "Database Error: " + databaseError.getMessage());
+                        }
+                    });
                 }
             }
         });
@@ -91,62 +153,7 @@ public class C1A_JPS_Login extends AppCompatActivity {
 
 
     public void checkStudent(){
-        final String studentid = StudentId.getText().toString().trim();
-        final String studentpass = StudentPassword.getText().toString().trim();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Class 1A");
-        Query checkUserDatabase = reference.orderByChild("sstudentid").equalTo(studentid);
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    Log.d("C1A_JPS_Login", "Data Snapshot: " + snapshot.toString());
-                    StudentId.setError(null);
-                    String passwordFromDB = snapshot.child(studentid).child("sstudentpass").getValue(String.class);
-                    if(passwordFromDB.equals(studentpass)){
-                        StudentPassword.setError(null);
-                        String nameFromDatabase = snapshot.child(studentid).child("sname").getValue(String.class);
-                        String classFromDatabase = snapshot.child(studentid).child("sclass").getValue(String.class);
-                        String sectionFromDatabase = snapshot.child(studentid).child("ssection").getValue(String.class);
-                        String studentidFromDatabase = snapshot.child(studentid).child("sstudentid").getValue(String.class);
-                        String rollnoFromDatabase = snapshot.child(studentid).child("srollno").getValue(String.class);
-                        String fnameFromDatabase = snapshot.child(studentid).child("sfname").getValue(String.class);
-                        String mnameFromDatabase = snapshot.child(studentid).child("smname").getValue(String.class);
-                        String mobileFromDatabase = snapshot.child(studentid).child("smobile").getValue(String.class);
-                        String addressFromDatabase = snapshot.child(studentid).child("saddress").getValue(String.class);
-                        String feeFromDatabase = snapshot.child(studentid).child("sfee").getValue(String.class);
-                        String attendanceFromDatabase = snapshot.child(studentid).child("sattendance").getValue(String.class);
 
-                        Intent ihome = new Intent(C1A_JPS_Login.this,C1A_StudentDetail.class);
-
-                        ihome.putExtra("name",nameFromDatabase);
-                        Log.d("C1A_JPS_Login", "Name: " + nameFromDatabase);
-                        ihome.putExtra("class",classFromDatabase);
-                        ihome.putExtra("section",sectionFromDatabase);
-                        ihome.putExtra("studentid",studentidFromDatabase);
-                        ihome.putExtra("rollno",rollnoFromDatabase);
-                        ihome.putExtra("fname",fnameFromDatabase);
-                        ihome.putExtra("mname",mnameFromDatabase);
-                        ihome.putExtra("mobile",mobileFromDatabase);
-                        ihome.putExtra("address",addressFromDatabase);
-                        ihome.putExtra("fee",feeFromDatabase);
-                        ihome.putExtra("attendance",attendanceFromDatabase);
-                        startActivity(ihome);
-                        finish();
-
-                    }else{
-                        StudentPassword.setError("Invalid Credentials");
-                        StudentPassword.requestFocus();
-                    }
-                } else{
-                    StudentId.setError("User does not exist");
-                    StudentId.requestFocus();
-                }
-                }
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-                    Log.e("C1A_JPS_Login", "Database Error: " + databaseError.getMessage());
-                }
-            });
         }
 
 

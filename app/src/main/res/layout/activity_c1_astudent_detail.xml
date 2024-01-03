@@ -219,31 +219,24 @@
             android:id="@+id/studentfee"/>
 
     </LinearLayout>
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:id="@+id/homecard">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:src="@drawable/baseline_home_24"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Go to Home"
-                android:textSize="20dp"
-                android:textColor="@color/purple"
-                android:textStyle="bold"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendance"
+            android:textSize="22sp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="254"
+            android:textSize="22dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/attendance1"/>
+
+    </LinearLayout>
 </LinearLayout>

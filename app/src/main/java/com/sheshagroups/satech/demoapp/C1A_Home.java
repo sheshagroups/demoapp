@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class C1A_Home extends AppCompatActivity {
-    SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences, sharedPreferences1;
     CardView student_detail, student_cw, student_hw, student_dpp, student_diary,
             student_notification, student_fees, student_logout, aboutschool, contactus, library,application;
 
@@ -52,13 +52,13 @@ public class C1A_Home extends AppCompatActivity {
         library = findViewById(R.id.library);
         application = findViewById(R.id.upload_application);
         sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        sharedPreferences1 = getSharedPreferences("student", MODE_PRIVATE);
 
 
         student_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent studentdetail = new Intent(C1A_Home.this, C1A_StudentDetail.class);
-                startActivity(studentdetail);
+                showStudentData();
             }
         });
         student_cw.setOnClickListener(new View.OnClickListener() {
@@ -109,10 +109,13 @@ public class C1A_Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
+                SharedPreferences.Editor editor1 = sharedPreferences1.edit();
                 editor.clear();
                 editor.commit();
-                Intent cwpdf = new Intent(C1A_Home.this, LoginPage.class);
-                startActivity(cwpdf);
+                editor1.clear();
+                editor1.commit();
+                Intent logout = new Intent(C1A_Home.this, LoginPage.class);
+                startActivity(logout);
                 finish();
             }
         });
@@ -147,5 +150,34 @@ public class C1A_Home extends AppCompatActivity {
                 startActivity(cwpdf);
             }
         });
+    }
+    public void showStudentData(){
+
+        Intent ihome = getIntent();
+        String sname = ihome.getStringExtra("name");
+        String sclass = ihome.getStringExtra("class");
+        String ssection = ihome.getStringExtra("section");
+        String srollno = ihome.getStringExtra("rollno");
+        String sstudentid = ihome.getStringExtra("studentid");
+        String sfname = ihome.getStringExtra("fname");
+        String smname = ihome.getStringExtra("mname");
+        String smobile = ihome.getStringExtra("mobile");
+        String sfee = ihome.getStringExtra("fee");
+        String saddress = ihome.getStringExtra("address");
+        String sattendance = ihome.getStringExtra("attendance");
+
+        Intent profile = new Intent(C1A_Home.this,C1A_StudentDetail.class);
+        profile.putExtra("Name",sname);
+        profile.putExtra("Class",sclass);
+        profile.putExtra("Section",ssection);
+        profile.putExtra("Studentid",sstudentid);
+        profile.putExtra("Rollno",srollno);
+        profile.putExtra("Fname",sfname);
+        profile.putExtra("Mname",smname);
+        profile.putExtra("Mobile",smobile);
+        profile.putExtra("Address",saddress);
+        profile.putExtra("Fee",sfee);
+        profile.putExtra("Attendance",sattendance);
+        startActivity(profile);
     }
 }

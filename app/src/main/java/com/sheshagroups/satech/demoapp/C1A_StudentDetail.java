@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class C1A_StudentDetail extends AppCompatActivity {
-    TextView name,Class,section,rollno,studentid,fname,mname,mobile,address,fee;
+    TextView name,Class,section,rollno,studentid,fname,mname,mobile,address,fee,attendance;
     CardView homecard;
 
     @Override
@@ -34,32 +34,28 @@ public class C1A_StudentDetail extends AppCompatActivity {
         mobile=findViewById(R.id.studentmobile);
         address=findViewById(R.id.studentaddress);
         fee=findViewById(R.id.studentfee);
-        homecard=findViewById(R.id.homecard);
+        attendance = findViewById(R.id.attendance1);
         showStudentData();
-        homecard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent back = new Intent(C1A_StudentDetail.this,C1A_Home.class);
-                startActivity(back);
-            }
-        });
+
 
 
     }
     public void showStudentData(){
 
         Intent ihome = getIntent();
-        String sname = ihome.getStringExtra("name");
-        String sclass = ihome.getStringExtra("class");
-        String ssection = ihome.getStringExtra("section");
-        String srollno = ihome.getStringExtra("rollno");
-        String sstudentid = ihome.getStringExtra("studentid");
-        String sfname = ihome.getStringExtra("fname");
-        String smname = ihome.getStringExtra("mname");
-        String smobile = ihome.getStringExtra("mobile");
-        String sfee = ihome.getStringExtra("fee");
-        String saddress = ihome.getStringExtra("address");
-       name.setText(sname);
+        String sname = ihome.getStringExtra("Name");
+        String sclass = ihome.getStringExtra("Class");
+        String ssection = ihome.getStringExtra("Section");
+        String srollno = ihome.getStringExtra("Rollno");
+        String sstudentid = ihome.getStringExtra("Studentid");
+        String sfname = ihome.getStringExtra("Fname");
+        String smname = ihome.getStringExtra("Mname");
+        String smobile = ihome.getStringExtra("Mobile");
+        String sfee = ihome.getStringExtra("Fee");
+        String saddress = ihome.getStringExtra("Address");
+        String sattendance = ihome.getStringExtra("Attendance");
+
+        name.setText(sname);
         Class.setText(sclass);
         section.setText(ssection);
         rollno.setText(srollno);
@@ -69,5 +65,6 @@ public class C1A_StudentDetail extends AppCompatActivity {
         mobile.setText(smobile);
         fee.setText(sfee);
         address.setText(saddress);
+        attendance.setText(sattendance);
     }
 }
