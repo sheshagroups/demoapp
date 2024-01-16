@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -46,10 +47,6 @@ public class C1A_JPS_Login extends AppCompatActivity {
         sharedPreferences1=getSharedPreferences("student",MODE_PRIVATE);
         FirebaseApp.initializeApp(this);
         Intent home = new Intent(C1A_JPS_Login.this,C1A_Home.class);
-        if(sharedPreferences1.contains("Student Id")&&sharedPreferences1.contains("Student Pass")){
-            startActivity(home);
-            finish();
-        }
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,13 +90,8 @@ public class C1A_JPS_Login extends AppCompatActivity {
                                     home.putExtra("address",addressFromDatabase);
                                     home.putExtra("fee",feeFromDatabase);
                                     home.putExtra("attendance",attendanceFromDatabase);
-                                    SharedPreferences.Editor editor= sharedPreferences1.edit();
-                                    editor.putString("Student Id", String.valueOf(StudentId));
-                                    editor.putString("Student Pass", String.valueOf(StudentPassword));
-                                    editor.commit();
                                     startActivity(home);
                                     finish();
-
                                 }else{
                                     StudentPassword.setError("Invalid Credentials");
                                     StudentPassword.requestFocus();
@@ -151,20 +143,4 @@ public class C1A_JPS_Login extends AppCompatActivity {
             return true;
         }}
 
-
-    public void checkStudent(){
-
-        }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(FirebaseAuth.getInstance().getCurrentUser() != null){
-            Intent home = new Intent(C1A_JPS_Login.this,C1A_Home.class);
-            home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(home);
-            finish();
-        }
-    }
 }

@@ -24,7 +24,8 @@ public class TeacherLogin extends AppCompatActivity {
         sharedPreferences1=getSharedPreferences("login1",MODE_PRIVATE);
         sharedPreferences2=getSharedPreferences("login2",MODE_PRIVATE);
         Intent teacherlogin = new Intent(TeacherLogin.this, C1ATeacher.class);
-        Intent teacherlogin1 = new Intent(TeacherLogin.this, Admin.class);
+        Intent teacherlogin1 = new Intent(TeacherLogin.this, C1BTeacher.class);
+        Intent teacherloginadmin = new Intent(TeacherLogin.this, Admin.class);
         if(sharedPreferences.contains("TeacherId")&&sharedPreferences.contains("TeacherPassword")){
             startActivity(teacherlogin);
             finish();
@@ -44,7 +45,7 @@ public class TeacherLogin extends AppCompatActivity {
                     editor.commit();
                     startActivity(teacherlogin);
                     finish();
-            } else if(TeacherId.getText().toString().equals("admin") && TeacherPassword.getText().toString().equals("admin")){
+            } else if(TeacherId.getText().toString().equals("teacher@c1b") && TeacherPassword.getText().toString().equals("teacher@c1b")){
                     SharedPreferences.Editor editor=sharedPreferences1.edit();
                     editor.putString("TeacherId", String.valueOf(TeacherId));
                     editor.putString("TeacherPassword",String.valueOf(TeacherPassword));
@@ -52,7 +53,15 @@ public class TeacherLogin extends AppCompatActivity {
                     startActivity(teacherlogin1);
                     finish();
                 }
+
+                else if(TeacherId.getText().toString().equals("admin@dsebst") && TeacherPassword.getText().toString().equals("admin")){
+                    SharedPreferences.Editor editor=sharedPreferences2.edit();
+                    editor.putString("TeacherId", String.valueOf(TeacherId));
+                    editor.putString("TeacherPassword",String.valueOf(TeacherPassword));
+                    editor.commit();
+                    startActivity(teacherloginadmin);
+                    finish();
             }
+        }
         });
-    }
-}
+    }}

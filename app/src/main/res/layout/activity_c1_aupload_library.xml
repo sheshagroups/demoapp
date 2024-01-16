@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple"
-        android:text="Upload DPP"
+        android:text="Upload Library"
         android:textAlignment="center"
         android:textSize="45sp"
         tools:layout_editor_absoluteX="-31dp"

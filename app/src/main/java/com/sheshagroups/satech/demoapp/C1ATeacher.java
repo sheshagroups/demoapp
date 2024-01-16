@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class C1ATeacher extends AppCompatActivity {
     SharedPreferences sharedPreferences;
-    CardView addstudent,uploadcw,uploadhw,uploaddpp,uploaddiary,addnotification,attendance,logout,updatestudent,application,library;
+    CardView addstudent,uploadcw,uploadhw,uploaddpp,uploaddiary,addnotification,logout,updatestudent,application,library;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,6 @@ public class C1ATeacher extends AppCompatActivity {
         uploaddpp=findViewById(R.id.upload_dpp);
         uploaddiary=findViewById(R.id.add_diary);
         addnotification=findViewById(R.id.add_notification);
-        attendance=findViewById(R.id.attendance);
         updatestudent=findViewById(R.id.updatestudent);
         logout=findViewById(R.id.logout_teacher);
         application = findViewById(R.id.application);
@@ -73,14 +72,6 @@ public class C1ATeacher extends AppCompatActivity {
             }
         });
 
-        attendance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent website;
-                website = new Intent(Intent.ACTION_VIEW, Uri.parse("https://z26zdgx6moybzk8aqvacew.on.drv.tw/class9b_attendance/"));
-                startActivity(website);
-            }
-        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

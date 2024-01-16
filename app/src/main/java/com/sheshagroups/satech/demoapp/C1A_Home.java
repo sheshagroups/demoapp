@@ -33,6 +33,7 @@ public class C1A_Home extends AppCompatActivity {
     SharedPreferences sharedPreferences, sharedPreferences1;
     CardView student_detail, student_cw, student_hw, student_dpp, student_diary,
             student_notification, student_fees, student_logout, aboutschool, contactus, library,application;
+    ImageView pdf,imp;
 
 
     @Override
@@ -53,6 +54,8 @@ public class C1A_Home extends AppCompatActivity {
         application = findViewById(R.id.upload_application);
         sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
         sharedPreferences1 = getSharedPreferences("student", MODE_PRIVATE);
+        pdf = findViewById(R.id.pdf);
+        imp = findViewById(R.id.impt);
 
 
         student_detail.setOnClickListener(new View.OnClickListener() {
@@ -109,11 +112,8 @@ public class C1A_Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                SharedPreferences.Editor editor1 = sharedPreferences1.edit();
                 editor.clear();
                 editor.commit();
-                editor1.clear();
-                editor1.commit();
                 Intent logout = new Intent(C1A_Home.this, LoginPage.class);
                 startActivity(logout);
                 finish();
@@ -147,6 +147,20 @@ public class C1A_Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent cwpdf = new Intent(C1A_Home.this, Upload_Application_C1A.class);
+                startActivity(cwpdf);
+            }
+        });
+        imp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cwpdf = new Intent(C1A_Home.this, Important.class);
+                startActivity(cwpdf);
+            }
+        });
+        pdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cwpdf = new Intent(C1A_Home.this, Document.class);
                 startActivity(cwpdf);
             }
         });

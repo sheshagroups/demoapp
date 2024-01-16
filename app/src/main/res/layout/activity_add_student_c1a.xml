@@ -68,7 +68,7 @@
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background" />
             <EditText
-                android:id="@+id/StudentTeacherPassword"
+                android:id="@+id/C1BStudentTeacherPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"

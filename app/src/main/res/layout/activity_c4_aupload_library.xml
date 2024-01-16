@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".C4A_Upload_Library">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        android:text="Upload Library"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        tools:layout_editor_absoluteX="-31dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageView
+        android:id="@+id/upload"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/baseline_cloud_upload_24"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="120dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the File"
+        android:layout_marginLeft="100dp"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadET"
+        android:hint="Name of the File"
+        android:textSize="30sp"/>
+
+
+    <Button
+        android:id="@+id/uploadcw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="120dp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+</LinearLayout>

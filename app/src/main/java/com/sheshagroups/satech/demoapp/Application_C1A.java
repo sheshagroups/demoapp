@@ -25,7 +25,7 @@ public class Application_C1A extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_application_c1);
+        setContentView(R.layout.activity_application_c1_a);
         diaryview = findViewById(R.id.diaryview1);
         diaryview.setHasFixedSize(true);
         diaryview.setLayoutManager(new LinearLayoutManager(this));

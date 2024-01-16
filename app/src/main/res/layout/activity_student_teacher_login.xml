@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".StudentTeacherLogin"
+    tools:context=".C1BStudentTeacherLogin"
     android:background="@drawable/login_bg">
 
     <ImageView
