@@ -17,6 +17,810 @@
         android:theme="@style/Theme.DemoApp"
         tools:targetApi="31">
         <activity
+            android:name=".C12C_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Upload_Application"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Fees"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_StudentDetail"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Library"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Diary"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_DPP"
+            android:exported="false" />
+        <activity
+            android:name=".C12C_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C12B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C12A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C11C_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C11B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C11A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C10B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C10A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C9B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C9A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C8B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C8A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C7B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C7A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C6B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C6A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C5B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C5A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C4B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C4A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C3B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C3A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C2B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C2A_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Classwork"
+            android:exported="false" />
+        <activity
+            android:name=".C12CTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C11CTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C12BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C11BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C11ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C10BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C10ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C9BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C9ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C8BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C8ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C7BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C7ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C6BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C6ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C1B_Home"
+            android:exported="false" />
+        <activity
+            android:name=".C5BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C5ATeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C4BTeacher"
+            android:exported="false" />
+        <activity
+            android:name=".C4ATeacher"
+            android:exported="false" />
+        <activity
             android:name=".C3BTeacher"
             android:exported="false" />
         <activity
@@ -869,10 +1673,10 @@
             android:name=".Upload_Doc"
             android:exported="false" />
         <activity
-            android:name=".Upload_Application_C1A"
+            android:name=".C1A_Upload_Application"
             android:exported="false" />
         <activity
-            android:name=".Library_C1A"
+            android:name=".C1A_Library"
             android:exported="false" />
         <activity
             android:name=".Application_C1A"
@@ -883,13 +1687,13 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8682864747875108~4788992900" />
+            android:value="@string/app_id" />
 
         <activity
             android:name=".C1A_EditStudent"
             android:exported="false" />
         <activity
-            android:name=".StudentTeacherLogin"
+            android:name=".C1AStudentTeacherLogin"
             android:exported="false" />
         <activity
             android:name=".FeeQR"
@@ -955,7 +1759,7 @@
             android:name=".TeacherLogin"
             android:exported="false" />
         <activity
-            android:name=".C1A_JPS_Login"
+            android:name=".C1A_DSE_Login"
             android:exported="false" />
         <activity
             android:name=".StudentDetail"

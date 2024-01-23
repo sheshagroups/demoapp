@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.sheshagroups.satech.demoapp'
+    namespace 'com.sheshagroups.satech.dseschool'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.sheshagroups.satech.demoapp"
+        applicationId "com.sheshagroups.satech.dseschool"
         minSdk 21
         targetSdk 34
         versionCode 1

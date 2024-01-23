@@ -38,8 +38,6 @@
         android:id="@+id/uploadETc1b"
         android:hint="Name of the File"
         android:textSize="30sp"/>
-
-
     <Button
         android:id="@+id/uploadcwc1b"
         android:layout_width="wrap_content"
@@ -50,4 +48,11 @@
         android:layout_marginLeft="120dp"
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="427dp" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ad_unit_id" />
 </LinearLayout>

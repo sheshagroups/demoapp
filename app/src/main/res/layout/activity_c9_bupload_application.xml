@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".C9B_Upload_Application">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        android:text="Upload Applicationa"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        tools:layout_editor_absoluteX="-31dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageView
+        android:id="@+id/upload1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/baseline_cloud_upload_24"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="120dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the File"
+        android:layout_marginLeft="100dp"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadET1"
+        android:hint="Name of the File"
+        android:textSize="30sp"/>
+
+
+    <Button
+        android:id="@+id/uploadcw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="120dp"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="427dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:layout_marginLeft="170dp"/>
+
+</LinearLayout>
