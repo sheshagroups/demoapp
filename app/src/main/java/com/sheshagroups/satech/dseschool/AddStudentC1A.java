@@ -42,7 +42,7 @@ public class AddStudentC1A extends AppCompatActivity {
         address = findViewById(R.id.C1AAddress);
         studentid = findViewById(R.id.C1AStudentId);
         studentpass = findViewById(R.id.C1AStudentPassword);
-        sstudentteacherpassword = findViewById(R.id.StudentTeacherPassword);
+        sstudentteacherpassword = findViewById(R.id.C1BStudentTeacherPassword);
         attendance = findViewById(R.id.attendance);
         add = findViewById(R.id.C1AaddButton);
         add.setOnClickListener(new View.OnClickListener() {

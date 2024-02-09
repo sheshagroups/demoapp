@@ -23,7 +23,6 @@ import com.google.firebase.database.ValueEventListener;
 public class C1A_DSE_Login extends AppCompatActivity {
 
 
-
     EditText StudentId, StudentPassword;
     TextView class_section;
     Button Login;
@@ -37,8 +36,7 @@ public class C1A_DSE_Login extends AppCompatActivity {
         StudentPassword = findViewById(R.id.studentpassword1a);
         Login = findViewById(R.id.loginC1A);
         class_section = findViewById(R.id.class_section);
-        sharedPreferences=getSharedPreferences("login",MODE_PRIVATE);
-        sharedPreferences1=getSharedPreferences("student",MODE_PRIVATE);
+        sharedPreferences=getSharedPreferences("login1",MODE_PRIVATE);
         FirebaseApp.initializeApp(this);
         Intent home = new Intent(C1A_DSE_Login.this,C1A_Home.class);
 

@@ -32,7 +32,7 @@ public class C12A_DSE_Login extends AppCompatActivity {
         StudentPassword = findViewById(R.id.studentpassword1b);
         Login = findViewById(R.id.loginC1B);
         class_section = findViewById(R.id.class_section);
-        sharedPreferences=getSharedPreferences("login",MODE_PRIVATE);
+        sharedPreferences=getSharedPreferences("login24",MODE_PRIVATE);
         sharedPreferences1=getSharedPreferences("student",MODE_PRIVATE);
         FirebaseApp.initializeApp(this);
         Intent home = new Intent(C12A_DSE_Login.this,C12A_Home.class);

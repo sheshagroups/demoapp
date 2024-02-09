@@ -18,7 +18,7 @@ public class Admin extends AppCompatActivity {
         doc = findViewById(R.id.uploaddoc);
         imp = findViewById(R.id.uploadimp);
         log = findViewById(R.id.adminlogout);
-        sharedPreferences=getSharedPreferences("login",MODE_PRIVATE);
+        sharedPreferences=getSharedPreferences("login26",MODE_PRIVATE);
         doc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -39,7 +39,7 @@ public class C7BTeacher extends AppCompatActivity {
         logout=findViewById(R.id.logout_teacher);
         application = findViewById(R.id.application);
         library = findViewById(R.id.upload_library);
-        sharedPreferences=getSharedPreferences("login1",MODE_PRIVATE);
+        sharedPreferences=getSharedPreferences("login13",MODE_PRIVATE);
         MobileAds.initialize(this);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);

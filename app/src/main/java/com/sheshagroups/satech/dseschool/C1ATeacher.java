@@ -16,6 +16,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -40,7 +42,11 @@ public class C1ATeacher extends AppCompatActivity {
         application = findViewById(R.id.application);
         library = findViewById(R.id.upload_library);
         sharedPreferences=getSharedPreferences("login",MODE_PRIVATE);
-        MobileAds.initialize(this);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
         InterstitialAd.load(this, getString(R.string.inter_ad_unit_id), adRequest, new InterstitialAdLoadCallback() {

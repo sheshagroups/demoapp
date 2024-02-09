@@ -14,64 +14,53 @@
         android:background="@color/purple"
         android:textColor="@color/black"
         android:textSize="30sp"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/com_logo"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/com_logo"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome to Shesha Groups Help Site"
+                android:text="Welcome to Delhi School of Excellence Help Site"
                 android:textSize="25sp"
                 android:textColor="@color/black"/>
             <TextView
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Founder's Mobile No.
-                7318039886"
+                android:text="Principal Office: 8115081120"
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CEO's Mobile No.
-                7318039886"
+                android:text="Director Office: 8840708951"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Office: 8052628255"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: Haveli Khas (Nera Krishna Mission Hospital), Basti Utter Pradesh"
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EMail-
-                sheshagroups474@gmail.com"
+                android:text="Pin Code: 272001"
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Address: 25 Floor, NH 32 Road, Noyeda, Utter Pradesh"
-                android:textSize="20dp"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pin Code: 227845"
-                android:textSize="20dp"
-                android:textColor="@color/black"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
 </LinearLayout>

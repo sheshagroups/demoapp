@@ -17,6 +17,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -49,7 +51,11 @@ public class C1A_Home extends AppCompatActivity {
         pdf = findViewById(R.id.pdf);
         imp = findViewById(R.id.impt);
         adView = findViewById(R.id.adView);
-        MobileAds.initialize(this);
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
         InterstitialAd.load(this, getString(R.string.inter_ad_unit_id), adRequest, new InterstitialAdLoadCallback() {

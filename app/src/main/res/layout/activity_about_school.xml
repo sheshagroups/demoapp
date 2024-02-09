@@ -8,22 +8,49 @@
     tools:context=".AboutSchool">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:src="@drawable/com_logo"
         android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shesha Groups"
+        android:text="\n Delhi School of Excellence"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:layout_gravity="center"/>
 
     <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About School"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Our Compay was established in 2023. The Goal of our Company is to make India best in Technology. And to improve the Education System of India. We need your support to do this."/>
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:text="Delhi school of excellence with all its might welcomes you.DSE is a school with an innovative vision in the field of education and
+personal excellence. Remarkable, DSE adheres to be very basic purpose of
+international standard of education. at DSE fundamental concept of the school
+is to reduce the generation gap in the entire field by the time the student gets
+mature and enter into the practical aspects of life. DSE is a new meaning to new
+dimension of education pattern. DSE is not a school. Its a place where the cradle of wisdom
+lies. Its is a place where the children learn education is cocooned to capture the mantle
+of human philosophy and its existence. Our collabration with the No. 1 Allen Kotal, Rajasthan
+, Leader in Medical and Engineering entrance, leaves no space for a student to miss his career goal."/>
+
+</ScrollView>
 </LinearLayout>
